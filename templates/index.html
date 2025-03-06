@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<!--<body background="{% static 'images\face2.jpeg' %}">-->
+    <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <h1>please upload an image</h1>
+    <br>
+    <br>
+    <form method="POST" class="post-form" enctype="multipart/form-data">  
+            {% csrf_token %}  
+            {{ form.as_p }}  
+           <button type="submit" class="save btn btn-default" id="ho">upload</button> 
+          
+    </form>  
+    </center>
+    <style>
+        #ho{
+            border-radius: 10px;
+        }
+  /*      body{
+            background-repeat: no-repeat;
+            background-size: 1600px 900px;
+        }*/
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</body>
+</html>
